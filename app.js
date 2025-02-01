@@ -28,5 +28,11 @@ function pageTransition() {
       element.classList.add("active");
     }
   });
+  // togle theme
+  const themebtn = document.querySelector(".theme-btn");
+  themebtn.addEventListener("click", () => {
+    let element = document.body;
+    element.classList.toggle("light-mode");
+  });
 }
 pageTransition();
