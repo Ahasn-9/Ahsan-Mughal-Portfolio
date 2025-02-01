@@ -265,6 +265,128 @@ section {
     }
   }
 }
+
+//about stats
+.about-stats {
+  padding-bottom: 4rem;
+  .progress-bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    .progress-bar {
+      display: flex;
+      flex-direction: column;
+      .prog-title {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .progress-con {
+        display: flex;
+        align-items: center;
+        .prog-text {
+          color: var(--grey2-color);
+        }
+        .progress {
+          width: 100%;
+          height: 0.45rem;
+          background-color: var(--grey4-color);
+          margin-left: 1rem;
+          position: relative;
+          span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: var(--secondary-color);
+            transition: all 0.4s ease-in-out;
+            width: 60%;
+          }
+          .html {
+            width: 80%;
+          }
+          .css {
+            width: 65%;
+          }
+          .js {
+            width: 70%;
+          }
+          .react-js {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+.stat-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 1px;
+    background-color: var(--grey5-color);
+  }
+}
+// Timeline
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-bottom: 3rem;
+  .timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    border-left: 2px solid var(--grey5-color);
+    .tl-icon {
+      position: absolute;
+      left: -27px;
+      top: 0;
+      background-color: var(--secondary-color);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: var(--white-color);
+        font-size: 1.3rem;
+      }
+    }
+    .tl-duration {
+      padding: 0.2rem 0.6rem;
+      background-color: var(--grey5-color);
+      border-radius: 15px;
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--grey1-color);
+    }
+    h5 {
+      padding: 1rem 0;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 600;
+      span {
+        color: var(--grey2-color);
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+    }
+    p {
+      color: var(--grey2-color);
+    }
+  }
+}
 // Independent Components
 .btn-container {
   display: flex;
