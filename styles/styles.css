@@ -715,6 +715,20 @@ section {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
+  .contact-content-con {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .contact-content-con .contact-content-con .right-contact .i-c-2 {
+    flex-direction: column;
+  }
+  .contact-content-con .contact-content-con .right-contact .i-c-2:last-child {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
   .section {
     padding: 2rem 2.5rem;
   }
