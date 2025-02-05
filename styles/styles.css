@@ -40,7 +40,7 @@ body {
   font-family: poppins, sans-serif;
   font-size: 1.1rem;
   color: var(--white-color);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 a {
@@ -54,6 +54,7 @@ header {
   min-height: 100vh;
   color: var(--white-color);
   overflow: hidden;
+  padding: 0 !important;
 }
 
 section {
@@ -65,42 +66,19 @@ section {
   padding: 3rem 18rem;
 }
 
-.section {
-  transform: translateY(-100%) scale(0);
+.container {
+  display: none;
+  transform: translateY(-100%) scaleY(0);
   transition: all 0.4s ease-in-out;
   background-color: var(--primary-color);
 }
 
-.sec1 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec2 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec3 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec4 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec5 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
+  animation: appear 1s ease-in-out;
+  transform: translateY(0) scaleY(1);
 }
-@keyframes scaleAnim {
+@keyframes appear {
   0% {
     transform: translateY(-100%) scaleY(0);
   }
@@ -122,7 +100,7 @@ section {
 }
 .controls .active-btn {
   background-color: var(--secondary-color) !important;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .controls .active-btn i {
   color: var(--white-color) !important;
@@ -173,7 +151,7 @@ section {
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  min-height: 100vh;
 }
 .header-content .left-header {
   display: flex;
@@ -197,7 +175,7 @@ section {
   height: 90%;
   width: 68%;
   margin-left: 4rem;
-  background-color: #000;
+  background-color: var(--black-color);
   transition: all 0.4s ease-in-out;
 }
 .header-content .left-header .image img {
@@ -231,7 +209,7 @@ section {
 .about-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
 .about-container .right-about {
@@ -661,19 +639,20 @@ section {
   opacity: 0.1;
 }
 
+.about-container .left-about p {
+  padding-left: 0;
+}
+
 @media screen and (max-width: 600px) {
-  .header {
-    padding: 0;
-  }
-  .header .right-header {
-    padding: 2rem !important;
+  header {
+    padding: 0 !important;
   }
   .theme-btn {
     width: 50px;
     height: 50px;
   }
   .header-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
   .left-header .h-shape {
@@ -681,56 +660,18 @@ section {
   }
   .right-header {
     grid-row: 1;
+    padding-right: 0rem !important;
     width: 90%;
     margin: 0 auto;
   }
   .right-header .name {
     font-size: 2.5rem !important;
+    text-align: center;
+    padding-top: 3rem;
   }
   .header-content .left-header .image {
     margin: 0 auto;
     width: 90%;
-  }
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-  .about-container .right-about {
-    grid-template-columns: 1fr;
-    padding-top: 2.5rem;
-  }
-  .about-container .left-about {
-    padding-right: 0;
-  }
-  .about-container .left-about p {
-    padding-left: 0;
-  }
-  .timeline {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .about-stats .progress-bars {
-    grid-template-columns: 1fr;
-  }
-  .portfolios {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .contact-content-con {
-    flex-direction: column;
-  }
-  .contact-content-con .right-contact {
-    margin-left: 0;
-    margin-top: 2.5rem;
-  }
-  .contact-content-con .contact-content-con .right-contact .i-c-2 {
-    flex-direction: column;
-  }
-  .contact-content-con .contact-content-con .right-contact .i-c-2:last-child {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
-  .section {
-    padding: 2rem 2.5rem;
   }
   .controls {
     top: auto;
@@ -744,5 +685,181 @@ section {
   }
   .controls .control {
     margin: 1rem 0.3rem;
+  }
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .right-about {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 2.5rem;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  .timeline {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 6rem;
+  }
+  .container {
+    padding: 2rem 2.5rem !important;
+  }
+  .about-stats .progress-bars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .portfolios {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 6rem;
+    margin-top: 1rem;
+  }
+  .contact-content-con {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .contact-content-con .right-contact .i-c-2 {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact .i-c-2 :last-child {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .contact-content-con .right-contact {
+    margin-bottom: 6rem;
+  }
+  .contact-item {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .contact-item p {
+    font-size: 15px;
+    color: var(--grey2-color);
+  }
+  .contact-item span {
+    font-size: 15px;
+  }
+  .contact-item .icon {
+    grid-template-columns: 25px 1fr;
+  }
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2.3rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 1432px) {
+  .container {
+    padding: 7rem 11rem;
+  }
+  .contact-content-con {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .contact-content-con .right-contact .i-c-2 {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact .i-c-2 :last-child {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .contact-content-con .right-contact {
+    margin-bottom: 6rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 5.5rem;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .portfolios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-content .right-header {
+    padding-right: 9rem;
+  }
+}
+@media screen and (max-width: 660px) {
+  .portfolios {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 1070px) {
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .right-about {
+    padding-top: 2.5rem;
+  }
+  .main-title h2 {
+    font-size: 4rem;
+  }
+  .main-title h2 span {
+    font-size: 4rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (max-width: 970px) {
+  .container {
+    padding: 7rem 6rem;
+  }
+  .about-container .left-about {
+    padding-right: 0rem;
+  }
+  .header-content {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 6rem;
+  }
+  .left-header .h-shape {
+    display: none;
+  }
+  .left-header .image {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .right-header {
+    grid-row: 1;
+    padding-right: 0rem !important;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .right-header .name {
+    font-size: 2.5rem !important;
+    text-align: center;
+    padding-top: 3rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 7rem 3rem;
+  }
+  .about-stats .progress-bars {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .right-about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .timeline {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main-title h2 {
+    font-size: 3rem;
+  }
+  .main-title h2 span {
+    font-size: 3rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4rem;
   }
 }/*# sourceMappingURL=styles.css.map */

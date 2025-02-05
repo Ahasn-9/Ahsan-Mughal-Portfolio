@@ -40,7 +40,7 @@ body {
   font-family: poppins, sans-serif;
   font-size: 1.1rem;
   color: var(--white-color);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 a {
@@ -53,6 +53,7 @@ header {
   min-height: 100vh;
   color: var(--white-color);
   overflow: hidden;
+  padding: 0 !important;
 }
 
 section {
@@ -64,41 +65,18 @@ section {
   padding: 3rem 18rem;
 }
 
-.section {
-  transform: translateY(-100%) scale(0);
+.container {
+  display: none;
+  transform: translateY(-100%) scaleY(0);
   transition: all 0.4s ease-in-out;
   background-color: var(--primary-color);
 }
 
-.sec1 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec2 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec3 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec4 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.sec5 {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
-  @keyframes scaleAnim {
+  animation: appear 1s ease-in-out;
+  transform: translateY(0) scaleY(1);
+  @keyframes appear {
     0% {
       transform: translateY(-100%) scaleY(0);
     }
@@ -120,7 +98,7 @@ section {
   transform: translateY(-50%);
   .active-btn {
     background-color: var(--secondary-color) !important;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
     i {
       color: var(--white-color) !important;
     }
@@ -173,7 +151,7 @@ section {
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  min-height: 100vh;
   .left-header {
     display: flex;
     align-items: center;
@@ -194,7 +172,7 @@ section {
       height: 90%;
       width: 68%;
       margin-left: 4rem;
-      background-color: #000;
+      background-color: var(--black-color);
       transition: all 0.4s ease-in-out;
       img {
         width: 100%;
@@ -229,7 +207,7 @@ section {
 .about-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   padding-bottom: 5rem;
   .right-about {
     display: grid;
