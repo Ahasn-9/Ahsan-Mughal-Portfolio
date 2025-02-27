@@ -283,27 +283,28 @@
               </div>
             </div>
             <div class="right-contact">
-              <form action="" class="contact-form">
+              <form action="" class="contact-form" id="contactForm">
                 <div class="input-control i-c-2">
-                  <input type="text" placeholder="Your Name">
-                  <input type="email" placeholder="Your Email">
+                  <input type="text" id="name" placeholder="Your Name" required>
+                  <input type="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="input-control">
-                  <input type="text" placeholder="Enter subject">
-                  <div class="input-control">
-                    <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
-                  </div>
-                  <div class="submit-btn">
-                    <a href="" class="main-btn">
-                      <span class="btn-text"> Submit </span>
-                      <span class="btn-icon">
-
-                        <i class="fas fa-paper-plane"></i>
-                      </span>
-                    </a>
-                  </div>
+                  <input type="text" id="subject" placeholder="Enter subject" required>
                 </div>
+                <div class="input-control">
+                  <textarea id="message" cols="15" rows="8" placeholder="Message Here..." required></textarea>
+                </div>
+                <div class="submit-btn">
+                  <button type="submit" class="main-btn">
+                    <span class="btn-text"> Submit </span>
+                    <span class="btn-icon">
+                      <i class="fas fa-paper-plane"></i>
+                    </span>
+                  </button>
+                </div>
+                <p id="responseMessage"></p>
               </form>
+
             </div>
           </div>
         </div>
