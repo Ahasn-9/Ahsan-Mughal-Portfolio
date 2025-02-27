@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website built with HTML, SCSS, and JavaS
 
 ## 🌐 Live Demo
 
-[Add your deployed website link here]
+[]
 
 ## ✨ Features
 
@@ -67,38 +67,3 @@ A modern, responsive personal portfolio website built with HTML, SCSS, and JavaS
 --secondary-color: #27ae60
 --white-color: #ffffff
 ```
-
-🔧 Setup and Installation
-
-1. Clone the repository:
-   git clone [your-repo-link]
-2. Open index.html in your browser or use a live server
-3. To modify styles:
-   Navigate to the styles folder
-   Edit styles.scss
-   Compile SCSS to CSS
-
-👤 Contact Information
-Name: Ahsan Mughal
-Email: mughalahsan718@gmail.com
-LinkedIn: Ahsan Mughal
-GitHub: Ahasn-9
-Location: Lahore, Pakistan
-
-📱 Responsive Breakpoints
-Mobile: 600px
-Tablet: 970px
-Laptop: 1250px
-Desktop: 1432px
-
-⚡️ Future Improvements
-Add form submission functionality
-Implement more interactive features
-Add project filtering in portfolio section
-Add blog section
-Enhance accessibility features
-📄 License
-[Add your chosen license here]
-
-This README provides a comprehensive overview of your portfolio project, including its features, technologies used, setup instructions, and contact information. Feel free to modify any section to better match your specific needs or preferences.
-This README provides a comprehensive overview of your portfolio project, including its features, technologies used, setup instructions, and contact information. Feel free to modify any section to better match your specific needs or preferences.
