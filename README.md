@@ -87,29 +87,39 @@ Contact Form
 POST /api/contact
 Saves contact form submissions
 Required fields: name, email, subject, message
-Returns: Success/Error message with status code
+Returns: Success/Error message with status code.
+
 💻 Development
-Frontend Development
+
+Frontend Development:
+
 Modify SCSS in styles/styles.scss
 Update responsive design in styles/\_media.scss
 Add new sections in index.html
-Backend Development
+Backend Development:
+
 Add new routes in routes/
 Create controllers in controllers/
 Define models in models/
-👤 Contact Information
+
+👤 Contact Information:
+
 Name: Ahsan Mughal
 Email: mughalahsan718@gmail.com
 LinkedIn: Ahsan Mughal
 GitHub: Ahasn-9
-Location: Lahore, Pakistan
-🔧 Future Improvements
+Location: Lahore, Pakistan.
+
+🔧 Future Improvements:
+
 Add authentication for admin dashboard
 Implement project filtering in portfolio
 Add blog section with CMS
 Enable email notifications for form submissions
-Add portfolio item management system
-📄 License
+Add portfolio item management system.
+
+📄 License:
+
 [Add your chosen license here]
 
 This README.md provides a comprehensive overview of your full-stack portfolio project, including both frontend and backend components, setup instructions, and development guidelines. The structure is clean and professional, making it easy for other developers to understand and contribute to your project.
