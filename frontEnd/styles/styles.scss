@@ -610,6 +610,60 @@ section {
     }
   }
 }
+//submit button
+/* Reset default button styles */
+.submit-btn button {
+  all: unset; /* Removes default button styles */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Apply same styles as the CV button */
+.submit-btn .main-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 2px solid var(--secondary-color);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Ensure button text is correctly positioned */
+.submit-btn .btn-text {
+  padding: 0 2rem;
+}
+
+/* Style the icon */
+.submit-btn .btn-icon {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+/* Fix hover effect */
+.submit-btn .main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  transform: translateX(100%);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.submit-btn .main-btn:hover::before {
+  transform: translateX(0);
+}
+
 // About Content
 .main-title {
   text-align: center;
